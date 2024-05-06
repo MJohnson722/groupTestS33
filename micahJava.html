@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> html with some javascript</title>
+    </head>
+    <body>
+        <h1 id="my_h1"> This is my website </h1>
+
+        <script>
+            document.getElementById("my_h1").innerHTML = "NEW HEADER!";
+            document.write("hello");
+            document.write(
+                '<div id="my_div" style="background-color:dodgerblue;'
+                + 'color:white;">I AM DODGER BLUE</div>');
+        </script>
+
+        <button id="my_button" style = "margin: 20px; padding:10px;">Click Me *_>*</button>
+        <script>
+            "use strict";
+            const my_button = document.getElementById("my_button")
+            const my_div = document.getElementById("my_div")
+            function changeDiv(){
+                my_div.innerHTML = "I AM CORAL!"
+                my_div.style = "background-color:coral; color:black;"
+            }
+
+            function changeDivColor(enter = true){
+                if (enter){
+                    my_div.style = "background-color:coral; color:black;"
+                } else {
+                    my_div.style = "background-color:dodgerblue; color:white;"
+                }
+                
+            }
+
+            my_button.addEventListener('click', changeDiv)
+            my_button.addEventListener('mouseenter', changeDivColor)
+            my_button.addEventListener('mouseleave', function(){changeDivColor(false);})
+        </script>
+
+        <!-- javascript works in a <script> tag-->
+        <script>
+
+            //makes us need to use good code
+            "use strict";
+
+            /*
+            This is
+            a
+            block comment
+            */
+
+            // annoying popup
+            //alert("Hello!");
+
+            //create a let variable
+            let my_variable;
+            my_variable = 17;
+            console.log(my_variable);
+            console.log("my_variable = ${my_variable}"); //pastes in console as string
+            console.log(`my_variable = ${my_variable}`); //pastes in console like f string 
+        </script>
+
+        <!-- Function Example-->
+        <script>
+            "use strict";
+            function myFunc(num) {
+                if (true) {
+                    var retval = num*10; //var can be hoisted (used by outer blocks) whereas let cannot
+                }
+                return retval;
+            }
+
+            let my_num = 5;
+            my_num = myFunc(my_num);
+            console.log(my_num)
+
+
+        </script>
+
+        <!-- Lambda Function Example-->
+        <script>
+            "use strict";
+            function trad(a) {return a +100;}
+            console.log(trad(5));
+
+            const lam = (a) => a + 100; //lambda or arrow function
+            console.log(lam(10))
+
+        </script>
+    </body>
+</html>
