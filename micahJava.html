@@ -2,6 +2,7 @@
 <html>
     <head>
         <title> html with some javascript</title>
+        <link rel="stylesheet" href="micahJava.css">
     </head>
     <body>
         <h1 id="my_h1"> This is my website </h1>
@@ -88,5 +89,36 @@
             console.log(lam(10))
 
         </script>
+
+        <div class="class1 class2">Text in div 1</div>
+        <script>
+            //== vs ===
+            //== compares for equality but will try to match typing -> (2 == 1+1) = true or ("2" == 1+1) = true
+            //=== compares for strict equality will force typing -> (2 === 1+1) = false
+
+            //short circuit evaluation
+            console.log(true && "<h1>This is a header</h1>")
+
+            //ternary operator
+            let name = "frankie";
+            if (name == "frankie"){
+                msg = "the if";
+            } else {
+                msg = "the else";
+            }
+            console.log(msg);
+
+            let msg2 = (name === "frankie") ? "the if" : "the else";
+            console.log(msg2);
+
+            //map
+            const numbers = [1,4,9,16,25];
+            const roots = numbers.map(Math.sqrt);
+            console.log(roots)
+        </script>
+
+
+
+
     </body>
 </html>
